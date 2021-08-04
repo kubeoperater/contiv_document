@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="netctl">
+
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>CLI Reference for netctl - Contiv</title>
+
+    <link href="/assets/stylesheets/application-ffbab1f8.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]><script src="/assets/javascripts/html5shiv-099439cc.js"></script><script src="/assets/javascripts/respond.min-1eb35b04.js"></script><![endif]-->
+
+    
+  </head>
+
+  <body id="page-CLI Reference for netctl" class=" page-CLI Reference for netctl layout-documents page-sub">
+
+  <div class="navbar-jumbotron">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" style="color:$white"><img src="/assets/images/contivicon4-fb7a06d8.png" height="32px" width="32px" alt="Contiv logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right main-nav">
+            <li><a href="/documents/">Docs</a></li>
+            <li><a href="https://github.com/contiv/install/releases" target="_blank">Download</a></li>
+             <li><a href="/documents/community/index.html">Community</a></li>
+             <li><a href="/documents/support/index.html">Support</a></li>
+            <li><a href="http://blogs.cisco.com/tag/contiv" target="_blank">Blog</a></li>
+            
+            <li><a href="https://github.com/contiv" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://contiv.herokuapp.com/" target="_blank"><i class="fa fa-slack"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+<div class="sidebar-overlay"></div>
+
+
+<aside id="sidebar" class="sidebar sidebar-default sidebar-fixed-right" role="navigation">
+    
+    <div class="sidebar-header header-cover">
+        
+        <div class="sidebar-image">
+            <img src="/assets/images/logo3-a96fcb82.png" width="49px" height="56px">
+        </div>
+    </div>
+
+    
+    <ul class="main nav sidebar-nav">
+        <li class="first"><a href="/intro/index.html">Intro</a></li>
+        <li class=""><a href="/docs/index.html">Docs</a></li>
+    </ul>
+    <div class="divider"></div>
+    
+    <ul class="external nav sidebar-nav">
+        <li class=""><a class="v-btn gray sml" href="https://github.com/contiv"><svg id="svg-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;">
+  <style>
+  </style>
+  <path class="" d="M13,0H1C0.5,0,0,0.5,0,1v12c0,0.5,0.5,1,1,1h4.7c0,0,0,0,0-0.1c0-0.2,0-0.6,0-1.1c-1.8,0.4-2.2-0.9-2.2-0.9
+    c-0.3-0.8-0.7-1-0.7-1c-0.6-0.4,0-0.4,0-0.4c0.7,0,1,0.7,1,0.7c0.6,1,1.5,0.7,1.9,0.5c0.1-0.4,0.2-0.7,0.4-0.9c-1.5-0.2-3-0.7-3-3.2
+    c0-0.7,0.3-1.3,0.7-1.8C3.7,5.8,3.5,5.1,3.9,4.2c0,0,0.6-0.2,1.8,0.7c0.5-0.1,1.1-0.2,1.6-0.2c0.6,0,1.1,0.1,1.6,0.2
+    c1.3-0.8,1.8-0.7,1.8-0.7c0.4,0.9,0.1,1.6,0.1,1.7c0.4,0.5,0.7,1,0.7,1.8c0,2.5-1.5,3.1-3,3.2C8.7,11.1,9,11.5,9,12.1
+    c0,0.9,0,1.6,0,1.8c0,0,0,0,0,0.1h4c0.5,0,1-0.5,1-1V1C14,0.5,13.5,0,13,0z"/>
+</svg>
+GitHub</a></li>
+    </ul>
+</aside>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-sm-3 col-xs-12">
+					<div class="docs-sidebar hidden-print affix-top" role="complementary">
+			<hr>
+			<h3>Release Notes</h3>
+			<ul class="nav">
+				<li>
+					<a href="/documents/releasenotes/v12x.html">1.2.x</a>
+					<a href="/documents/releasenotes/v11x.html">1.1.x</a>
+					<a href="/documents/releasenotes/v10x.html">1.0.x</a>
+				</li>
+			</ul>
+			<hr>
+			<h3>Getting Started</h3>
+							<ul class="nav">
+							<li>
+								<a href="/documents/gettingStarted/">Intro</a>
+						    </li>
+							<li>
+								<a href="/documents/networking/features.html">Features</a>
+						    </li>
+								<li>
+									<a href="https://github.com/contiv/install/blob/master/README.md">Installation</a>
+									</li>
+						    <li>
+								<a href="/documents/networking/">Contiv Networking Concepts</a>
+						    </li>
+								</ul>
+									<hr>
+			<h3>Admin Guide</h3>
+			<ul class="nav">
+				<li>
+					<a href="/documents/admin/index.html">Intro</a>
+				</li>
+				<li>
+				    <a href="/documents/admin/createTenant.html">Managing Tenants</a>
+				</li>
+				<li>
+				    <a href="/documents/admin/manageUsers.html">Managing Users</a>
+			    </li>		
+			    <li>
+				    <a href="/documents/admin/manageAuthorizations.html">Managing Authorizations</a>
+			    </li>
+			    <li>
+				    <a href="/documents/admin/createNodes.html">Managing Nodes</a>
+			    </li>
+			     <li>
+				    <a href="/documents/admin/manageNetworks.html">Managing Networks</a>
+			    </li>
+			    <li>
+				    <a href="/documents/admin/manageLDAP.html">Managing LDAP</a>
+			    </li>
+			</ul>
+				</li>
+			</ul>
+			<hr>
+			<h3>User Guide</h3>
+						
+					<ul class="nav">
+						<li>
+								<a href="/documents/networking/policies.html">Policies</a>
+						</li>
+						<li>
+								<a href="/documents/networking/services.html">Service Loadbalancing</a>
+						</li>
+						<li>
+								<a class="hasChildren" href="/documents/networking/physical-networks.html">Physical Networks</a>
+								<ul class="nav">
+									<li>
+											<a href="/documents/networking/bgp.html">L3 Routed Networks</a>
+									</li>
+									<li>
+											<a href="/documents/networking/l2-vlan.html">L2 Bridged Networks</a>
+									</li>
+									<li>
+											<a href="/documents/networking/aci_ug.html">Cisco ACI</a>
+									</li>
+								</ul>
+						</li>
+						<li>
+								<a href="/documents/networking/ipam.html">IPAM and Service Discovery</a>
+						</li>
+						<li>
+								<a href="/documents/networking/ipv6.html">IPv6</a>
+						</li>
+					</ul>
+				</li>
+				
+				
+			</ul>
+			<hr><p>
+			<h3>Tutorials and Talks</h3>
+				<ul class="nav">
+					<li>
+						<a href="/documents/tutorials/index.html">Tutorials</a>
+					</li>
+					<li>
+						<a href="/documents/demos/index.html">Demonstration Videos</a>
+					</li>
+					<li>
+						<a href="/documents/talks/index.html">Community Talks</a>
+					</li>
+				</ul>
+			<hr><p>
+			<h3>OpenShift</h3>
+				<ul class="nav">
+						<li>
+							<a href="/documents/openshift/index.html">Contiv and OpenShift</a>
+						</li>
+				</ul>
+			<hr><p>
+			<h3>Examples</h3>
+				<ul class="nav">
+						</li>
+						<li>
+							<a href="/documents/samples/mcast.html">Multicast Examples</a>
+						</li>
+				</ul>
+				<hr><p>
+			<h3>Community</h3>
+				<ul class="nav">
+						</li>
+						<li>
+							<a href="/documents/community/index.html">Engagement</a>
+							<a href="/documents/community/examples.html">Community Resources </a>
+						</li>
+				</ul>
+			<hr><p>
+			<h3>Reference</h3>
+				<ul class="nav">
+					    <li>
+					    <a href="/documents/api/wip.html" target="_blank">API Reference</a>
+					    </li> 
+					    <li>
+					    <a href="/documents/reference/netctlcli.html" target="_blank">CLI Reference</a>
+					    </li> 
+						<li><a href="https://godoc.org/github.com/contiv/contivmodel/client" target="_blank">Go Client Library</a>
+						</li>
+						
+				</ul>
+			<hr><p>
+		</div>
+
+		</div>  
+		<div id="main-content" class="col-sm-9 col-md-9 col-xs-12" role="main">
+			<div class="bs-docs-section">
+					<h1>Command-Line Interface</h1>
+<p>Contiv uses the netctl command-line interface (CLI) to configure networks, policies, and service load balancers.</p>
+<p><strong>Note:</strong> netctl directly talks to netmaster, bypassing Contiv authentication and authorization. If you want to use this utility, set it up on a separate cluster node.</p>
+
+<ul>
+<li><a href="/documents/reference/netctlcli.html#netctl">netctl</a>
+
+<ul>
+<li><a href="/documents/reference/netctlcli.html#acigw">aci-gw</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#approfile">app-profile</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#bgp">bgp</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#endpoint">endpoint, ep</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#externalcontracts">external-contracts</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#global">global</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#group">group</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#login">login</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#netprofile">netprofile</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#network">network, net</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#policy">policy</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#service">service</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#tenant">tenant</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#version">version</a>
+</li>
+<li><a href="/documents/reference/netctlcli.html#help">help</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<h2><a name="netctl"></a>netctl</h2>
+
+<h3>NAME:</h3>
+<p><code>netctl</code> - A new cli application</p>
+
+<h3>USAGE:</h3>
+<pre class="highlight plaintext"><code>   ./netctl [global options] command [command options] [arguments...]
+</code></pre>
+
+<h3>COMMANDS:</h3>
+<p><code>aci-gw</code>             ACI Gateway information<br>
+   <code>app-profile</code>        Application Profile manipulation tools<br>
+   <code>bgp</code>                Router capability configuration<br>
+   <code>endpoint, ep</code>       Endpoint Inspection<br>
+   <code>external-contracts</code> External contracts<br>
+   <code>global</code>             Global information<br>
+   <code>group</code>              Endpoint Group manipulation tools<br>
+   <code>login</code>              Authenticate to Contiv
+   <code>netprofile</code>         Network profile manipulation tools<br>
+   <code>network, net</code>       Network manipulation tools<br>
+   <code>policy</code>             Policy manipulation tools <br>
+   <code>service</code>            Service object creation <br>
+   <code>tenant</code>             Tenant manipulation tools<br>
+   <code>version</code>            Version Information<br>
+   <code>help, h</code>            Shows a list of commands or help for one command<br></p>
+
+<h2>GLOBAL OPTIONS:</h2>
+<p><code>--help, -h</code>             Show help <br>
+   <code>--insecure</code>             Disable strict certificate checking <br>
+   <code>--netmaster &quot;http://netmaster:9999&quot;</code>    The hostname of the netmaster [$NETMASTER] <br>
+   <code>--version, -v</code>          Print the version <br></p>
+
+<h2><a name="group"></a>group</h2>
+
+<h3>NAME:</h3>
+<p><code>group</code> - Endpoint Group  manipulation tools</p>
+
+<h3>USAGE:</h3>
+<pre class="highlight plaintext"><code>   netctl group command [command options] [arguments...] 
+</code></pre>
+
+<h3>COMMANDS:</h3>
+<p><code>create</code>     Create an endpoint group<br>
+   <code>inspect</code>    Inspect a EndpointGroup<br>
+   <code>rm, delete</code> Delete an endpoint group<br>
+   <code>ls, list</code>   List endpoint groups<br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h5>OPTIONS:</h5>
+<p><code>--help, -h</code> show help</p>
+
+<h2><a name="acigw"></a>aci-gw</h2>
+
+<h3>NAME:</h3>
+<p><code>netctl aci-gw</code> - ACI Gateway information</p>
+
+<h3>USAGE:</h3>
+<p><code>netctl aci-gw command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>info</code>   Show ACI gateway information<br>
+   <code>inspect</code>    Inspect aci gateway operational information<br>
+   <code>set</code>        Set aci-gw parameters.<br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h3>OPTIONS:</h3>
+<p><code>--help, -h</code> show help</p>
+
+<h2><a name="approfile"></a>app-profile</h2>
+
+<h3>NAME:</h3>
+<p><code>netctl app-profile</code> - Application Profile manipulation tools</p>
+
+<h3>USAGE:</h3>
+<p><code>netctl app-profile command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>create</code>     Create an application profile <br>
+   <code>update</code> Update an application profile <br>
+   <code>rm, delete</code>     Delete an application profile <br>
+   <code>ls, list</code>       List application profiles <br>
+   <code>group-ls, group-list</code>   List groups in an app-profile <br>
+   <code>help, h</code>    Shows a list of commands or help for one command <br></p>
+
+<h3>OPTIONS:</h3>
+<p><code>--help, -h</code> show help</p>
+
+<h2><a name="bgp"></a>bgp</h2>
+
+<h3>NAME:</h3>
+<p><code>netctl bgp</code> - Router capability configuration</p>
+
+<h3>USAGE:</h3>
+<p><code>netctl bgp command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>ls, list</code>   List BGP configuration<br>
+   <code>rm, delete</code> Delete BGP configuration<br>
+   <code>create</code>     Add BGP configuration.<br>
+   <code>inspect</code>    Inspect BGP<br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h3>OPTIONS:</h3>
+<p><code>--help, -h</code> show help</p>
+
+<h2><a name="endpoint"></a>endpoint</h2>
+
+<h3>NAME:</h3>
+<p><code>endpoint, ep</code> - Endpoint Inspection<br></p>
+
+<h3>USAGE:</h3>
+<p><code>netctl endpoint command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>inspect</code>    Inspect an Endpoint<br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h2><a name="externalcontracts"></a>external-contracts</h2>
+
+<h3>NAME:</h3>
+<p><code>netctl external-contracts</code> - External contracts</p>
+
+<h3>USAGE:</h3>
+<p><code>netctl external-contracts command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>ls, list</code>   List external contracts<br>
+   <code>rm, delete</code> Delete external contracts<br>
+   <code>create</code>     Create external contracts<br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h3>OPTIONS:</h3>
+<p><code>--help, -h</code> show help</p>
+
+<h2><a name="global"></a>global</h2>
+
+<h3>NAME:</h3>
+<p><code>netctl global</code> - Global information</p>
+
+<h3>USAGE:</h3>
+<p><code>netctl global command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>info</code>       Show global information<br>
+   <code>inspect</code>    Inspect global operational information<br>
+   <code>set</code>        Set global parameters<br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h3>OPTIONS:</h3>
+<p><code>--help, -h</code> show help</p>
+
+<h2><a name="login"></a>login</h2>
+<p>Contiv comes with a proxy called <a href="https://github.com/contiv/auth_proxy">auth_proxy</a> which transparently sits in front of netmaster and provides authentication (Active Directory, LDAP, local users) and authorization (RBAC).  netctl can send requests to auth_proxy as if it were sending requests directly to netmaster.  For more details, please see <a href="https://github.com/contiv/auth_proxy">the auth_proxy repo</a>.</p>
+<p>You must login before you can send any netctl requests to auth_proxy.  Any requests destined for auth_proxy must include the global <code>--netmaster</code> flag with the full HTTPS auth_proxy URL as the value.</p>
+<p>If the target auth_proxy is using an expired, invalid, or untrusted certificate, you will additionally need to specify the global <code>--insecure</code> flag.</p>
+<p>netctl stores its auth_proxy access token under <code>$HOME/.netctl/config.json</code>.  To &quot;logout&quot;, simply delete this file.</p>
+
+<h3>NAME:</h3>
+<p><code>netctl login</code> - Authenticate to Contiv</p>
+
+<h3>USAGE:</h3>
+<p>In these examples, set <code>$AUTH_PROXY_URL</code> to the full HTTPS auth_proxy URL.  This will look something like: <code>https://1.2.3.4:10000</code></p>
+
+<h4>Login (you will be prompted for your username and password)</h4>
+<p><code>netctl --netmaster=$AUTH_PROXY_URL login</code></p>
+
+<h4>Send authenticated request (token is automatically sent)</h4>
+<p><code>netctl --netmaster=$AUTH_PROXY_URL network ls</code></p>
+
+<h4>Send request to auth_proxy with untrusted certificate</h4>
+<p><code>netctl --insecure --netmaster=$AUTH_PROXY_URL network ls</code></p>
+
+<h2>OPTIONS:</h2>
+<p><code>--help, -h  show help</code></p>
+
+<h2><a name="netprofile"></a>netprofile</h2>
+
+<h3>NAME:</h3>
+<p><code>netctl netprofile</code> - Network profile manipulation tools</p>
+
+<h3>USAGE:</h3>
+<p><code>netctl netprofile command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>create</code>     Create a network profile<br>
+   <code>rm, delete</code> Delete a network profile<br>
+   <code>ls, list</code>   List network profile<br>
+   <code>inspect</code>    Inspect network profile <br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h2>OPTIONS:</h2>
+<p><code>--help, -h  show help</code></p>
+
+<h2><a name="network"></a>network</h2>
+
+<h3>NAME:</h3>
+<p><code>netctl network</code> - Network manipulation tools</p>
+
+<h3>USAGE:</h3>
+<p><code>netctl network command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>ls, list</code>   List networks <br>
+   <code>inspect</code>    Inspect a network <br>
+   <code>rm, delete</code> Delete a network<br>
+   <code>create</code>     Create a network<br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h3>OPTIONS:</h3>
+<p><code>--help, -h  show help</code></p>
+
+<h2><a name="policy"></a>policy</h2>
+
+<h3>NAME:</h3>
+<p><code>netctl policy</code> - Policy manipulation tools</p>
+
+<h3>USAGE:</h3>
+<p><code>netctl policy command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>create</code>     Create a new policy<br>
+   <code>rm, delete</code> Delete a policy<br>
+   <code>ls, list</code>   List policies<br>
+   <code>inspect</code>    Inspect a policy<br>
+   <code>rule-ls</code>    List rules for a given tenant, policy<br>
+   <code>rule-rm</code>    Delete a rule from the policy<br>
+   <code>rule-add</code>   Add a new rule to the policy<br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h3>OPTIONS:</h3>
+<p><code>--help, -h</code> show help</p>
+
+<h2><a name="service"></a>service</h2>
+
+<h3>NAME:</h3>
+<p><code>netctl service</code> - Service object creation</p>
+
+<h3>USAGE:</h3>
+<p><code>netctl service command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>ls, list</code>   List service objects <br>
+   <code>inspect</code>    Inspect a Network<br>
+   <code>rm, delete</code> Delete service object<br>
+   <code>create</code> Create Service object.<br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h3>OPTIONS:</h3>
+<p><code>--help, -h</code> show help</p>
+
+<h2><a name="tenant"></a>tenant</h2>
+
+<h3>NAME:</h3>
+<p><code>tenant</code> Tenant manipulation tools <br></p>
+
+<h3>USAGE:</h3>
+<p><code>netctl tenant command [command options] [arguments...]</code></p>
+
+<h3>COMMANDS:</h3>
+<p><code>ls, list</code>   List tenants <br>
+   <code>rm, delete</code> Delete a tenant<br>
+   <code>create</code>     Create a tenant<br>
+   <code>inspect</code>    Inspect a tenant<br>
+   <code>help, h</code>    Shows a list of commands or help for one command<br></p>
+
+<h3>OPTIONS:</h3>
+<p><code>--help, -h</code> show help</p>
+
+<h2><a name="version"></a>version</h2>
+<p><code>netctl version</code>  Version Information for netctl client and sever, git commit hash, and build time.</p>
+
+<h2><a name="help">help</h2>
+<p><code>netctl help</code> Shows help information</p>
+
+	<hr>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <hr>
+            <p style="text-align: center"><font color="black">Copyright &copy; 2017 Cisco and/or its affiliates. All rights reserved.</font>
+            </p>
+    </div>
+</div>

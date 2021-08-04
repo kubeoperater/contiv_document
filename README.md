@@ -26,4 +26,12 @@ Directory structure:
 		  +- documents: this folder contains all the .md files for documentation
 		  +- layouts: contains the template for header, footer, and sidebar elements
 ```
-# contiv_document
+使用
+``` 
+docker build . 
+```
+或者使用现有的镜像
+``` bash 
+docker run -dit  -p 4567:4567 -p 35729:35729  --name contiv_document sadlar/contiv_document:v2.0  bash
+```
+然后访问http://127.0.0.1:4567/

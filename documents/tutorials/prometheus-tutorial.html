@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contiv Prometheus Integration">
+
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Contiv Prometheus Integration for Kubernetes - Contiv</title>
+
+    <link href="/assets/stylesheets/application-ffbab1f8.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]><script src="/assets/javascripts/html5shiv-099439cc.js"></script><script src="/assets/javascripts/respond.min-1eb35b04.js"></script><![endif]-->
+
+    
+  </head>
+
+  <body id="page-Contiv Prometheus Integration for Kubernetes" class=" page-Contiv Prometheus Integration for Kubernetes layout-documents page-sub">
+
+  <div class="navbar-jumbotron">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" style="color:$white"><img src="/assets/images/contivicon4-fb7a06d8.png" height="32px" width="32px" alt="Contiv logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right main-nav">
+            <li><a href="/documents/">Docs</a></li>
+            <li><a href="https://github.com/contiv/install/releases" target="_blank">Download</a></li>
+             <li><a href="/documents/community/index.html">Community</a></li>
+             <li><a href="/documents/support/index.html">Support</a></li>
+            <li><a href="http://blogs.cisco.com/tag/contiv" target="_blank">Blog</a></li>
+            
+            <li><a href="https://github.com/contiv" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://contiv.herokuapp.com/" target="_blank"><i class="fa fa-slack"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+<div class="sidebar-overlay"></div>
+
+
+<aside id="sidebar" class="sidebar sidebar-default sidebar-fixed-right" role="navigation">
+    
+    <div class="sidebar-header header-cover">
+        
+        <div class="sidebar-image">
+            <img src="/assets/images/logo3-a96fcb82.png" width="49px" height="56px">
+        </div>
+    </div>
+
+    
+    <ul class="main nav sidebar-nav">
+        <li class="first"><a href="/intro/index.html">Intro</a></li>
+        <li class=""><a href="/docs/index.html">Docs</a></li>
+    </ul>
+    <div class="divider"></div>
+    
+    <ul class="external nav sidebar-nav">
+        <li class=""><a class="v-btn gray sml" href="https://github.com/contiv"><svg id="svg-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;">
+  <style>
+  </style>
+  <path class="" d="M13,0H1C0.5,0,0,0.5,0,1v12c0,0.5,0.5,1,1,1h4.7c0,0,0,0,0-0.1c0-0.2,0-0.6,0-1.1c-1.8,0.4-2.2-0.9-2.2-0.9
+    c-0.3-0.8-0.7-1-0.7-1c-0.6-0.4,0-0.4,0-0.4c0.7,0,1,0.7,1,0.7c0.6,1,1.5,0.7,1.9,0.5c0.1-0.4,0.2-0.7,0.4-0.9c-1.5-0.2-3-0.7-3-3.2
+    c0-0.7,0.3-1.3,0.7-1.8C3.7,5.8,3.5,5.1,3.9,4.2c0,0,0.6-0.2,1.8,0.7c0.5-0.1,1.1-0.2,1.6-0.2c0.6,0,1.1,0.1,1.6,0.2
+    c1.3-0.8,1.8-0.7,1.8-0.7c0.4,0.9,0.1,1.6,0.1,1.7c0.4,0.5,0.7,1,0.7,1.8c0,2.5-1.5,3.1-3,3.2C8.7,11.1,9,11.5,9,12.1
+    c0,0.9,0,1.6,0,1.8c0,0,0,0,0,0.1h4c0.5,0,1-0.5,1-1V1C14,0.5,13.5,0,13,0z"/>
+</svg>
+GitHub</a></li>
+    </ul>
+</aside>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-sm-3 col-xs-12">
+					<div class="docs-sidebar hidden-print affix-top" role="complementary">
+			<hr>
+			<h3>Release Notes</h3>
+			<ul class="nav">
+				<li>
+					<a href="/documents/releasenotes/v12x.html">1.2.x</a>
+					<a href="/documents/releasenotes/v11x.html">1.1.x</a>
+					<a href="/documents/releasenotes/v10x.html">1.0.x</a>
+				</li>
+			</ul>
+			<hr>
+			<h3>Getting Started</h3>
+							<ul class="nav">
+							<li>
+								<a href="/documents/gettingStarted/">Intro</a>
+						    </li>
+							<li>
+								<a href="/documents/networking/features.html">Features</a>
+						    </li>
+								<li>
+									<a href="https://github.com/contiv/install/blob/master/README.md">Installation</a>
+									</li>
+						    <li>
+								<a href="/documents/networking/">Contiv Networking Concepts</a>
+						    </li>
+								</ul>
+									<hr>
+			<h3>Admin Guide</h3>
+			<ul class="nav">
+				<li>
+					<a href="/documents/admin/index.html">Intro</a>
+				</li>
+				<li>
+				    <a href="/documents/admin/createTenant.html">Managing Tenants</a>
+				</li>
+				<li>
+				    <a href="/documents/admin/manageUsers.html">Managing Users</a>
+			    </li>		
+			    <li>
+				    <a href="/documents/admin/manageAuthorizations.html">Managing Authorizations</a>
+			    </li>
+			    <li>
+				    <a href="/documents/admin/createNodes.html">Managing Nodes</a>
+			    </li>
+			     <li>
+				    <a href="/documents/admin/manageNetworks.html">Managing Networks</a>
+			    </li>
+			    <li>
+				    <a href="/documents/admin/manageLDAP.html">Managing LDAP</a>
+			    </li>
+			</ul>
+				</li>
+			</ul>
+			<hr>
+			<h3>User Guide</h3>
+						
+					<ul class="nav">
+						<li>
+								<a href="/documents/networking/policies.html">Policies</a>
+						</li>
+						<li>
+								<a href="/documents/networking/services.html">Service Loadbalancing</a>
+						</li>
+						<li>
+								<a class="hasChildren" href="/documents/networking/physical-networks.html">Physical Networks</a>
+								<ul class="nav">
+									<li>
+											<a href="/documents/networking/bgp.html">L3 Routed Networks</a>
+									</li>
+									<li>
+											<a href="/documents/networking/l2-vlan.html">L2 Bridged Networks</a>
+									</li>
+									<li>
+											<a href="/documents/networking/aci_ug.html">Cisco ACI</a>
+									</li>
+								</ul>
+						</li>
+						<li>
+								<a href="/documents/networking/ipam.html">IPAM and Service Discovery</a>
+						</li>
+						<li>
+								<a href="/documents/networking/ipv6.html">IPv6</a>
+						</li>
+					</ul>
+				</li>
+				
+				
+			</ul>
+			<hr><p>
+			<h3>Tutorials and Talks</h3>
+				<ul class="nav">
+					<li>
+						<a href="/documents/tutorials/index.html">Tutorials</a>
+					</li>
+					<li>
+						<a href="/documents/demos/index.html">Demonstration Videos</a>
+					</li>
+					<li>
+						<a href="/documents/talks/index.html">Community Talks</a>
+					</li>
+				</ul>
+			<hr><p>
+			<h3>OpenShift</h3>
+				<ul class="nav">
+						<li>
+							<a href="/documents/openshift/index.html">Contiv and OpenShift</a>
+						</li>
+				</ul>
+			<hr><p>
+			<h3>Examples</h3>
+				<ul class="nav">
+						</li>
+						<li>
+							<a href="/documents/samples/mcast.html">Multicast Examples</a>
+						</li>
+				</ul>
+				<hr><p>
+			<h3>Community</h3>
+				<ul class="nav">
+						</li>
+						<li>
+							<a href="/documents/community/index.html">Engagement</a>
+							<a href="/documents/community/examples.html">Community Resources </a>
+						</li>
+				</ul>
+			<hr><p>
+			<h3>Reference</h3>
+				<ul class="nav">
+					    <li>
+					    <a href="/documents/api/wip.html" target="_blank">API Reference</a>
+					    </li> 
+					    <li>
+					    <a href="/documents/reference/netctlcli.html" target="_blank">CLI Reference</a>
+					    </li> 
+						<li><a href="https://godoc.org/github.com/contiv/contivmodel/client" target="_blank">Go Client Library</a>
+						</li>
+						
+				</ul>
+			<hr><p>
+		</div>
+
+		</div>  
+		<div id="main-content" class="col-sm-9 col-md-9 col-xs-12" role="main">
+			<div class="bs-docs-section">
+					<h2>Data Analytics with Prometheus and Grafana for Kubernetes</h2>
+
+<ul>
+<li><a href="#setup">Setup</a>
+</li>
+<li><a href="#ch1">Chapter 1 - Prometheus and Grafana</a>
+</li>
+<li><a href="#ch2">Chapter 2 - Basic Ping Example</a>
+</li>
+<li><a href="#resources">Resources</a>
+</li>
+</ul>
+<p>This walks through the setup for Prometheus and Grafana and an example that may be useful for troubleshooting connectivity issues within your cluster.</p>
+
+<h3><a name="setup"></a> Setup</h3>
+<p>Please finish the <a href="/documents/tutorials/networking-kubernetes-16.html">Container Networking Tutorial</a>, but do not clean up your cluster.</p>
+<p>In order to install Prometheus and Grafana, please follow these steps.</p>
+<pre class="highlight plaintext"><code>$ cd install/cluster/
+$ vagrant ssh kubeadm-master
+[vagrant@kubeadm-master ~]$ cd contiv-*
+[vagrant@kubeadm-master contiv-1.2.0]$ cd install/k8s/configs/
+[vagrant@kubeadm-master configs]$ pwd
+/home/vagrant/contiv-1.2.0/install/k8s/configs
+[vagrant@kubeadm-master configs]$ sudo -i
+[root@kubeadm-master ~]# cd /home/vagrant/contiv-1.2.0/install/k8s/configs
+[root@kubeadm-master configs]# cp prometheus.yml /var/contiv/prometheus.yml
+[root@kubeadm-master configs]# exit
+exit
+</code></pre>
+<pre class="highlight plaintext"><code>[vagrant@kubeadm-master configs]$  kubectl create -f contiv-prometheus.yml
+clusterrole "prometheus" created
+serviceaccount "prometheus" created
+clusterrolebinding "prometheus" created
+replicaset "contiv-prometheus" created
+service "prometheus" created
+
+[vagrant@kubeadm-master configs]$ kubectl create -f contiv-grafana.yml
+clusterrole "grafana" created
+serviceaccount "grafana" created
+clusterrolebinding "grafana" created
+replicaset "contiv-grafana" created
+service "grafana" created
+
+[vagrant@kubeadm-master configs]$ cd
+</code></pre>
+<p>Check if Contiv&#39;s <code>stats_exporter</code> is running as a sidecar container in the netmaster and netplugin kubernetes pods.</p>
+<pre class="highlight plaintext"><code>[vagrant@kubeadm-master configs]$ kubectl get pods -n=kube-system | grep 'netplugin\|netmaster'
+contiv-netmaster-425jp                   3/3       Running   0          2d
+contiv-netplugin-75dxx                   2/2       Running   0          2d
+contiv-netplugin-zhbrd                   2/2       Running   0          2d
+
+[vagrant@kubeadm-master configs]$ kubectl describe pod -n=kube-system contiv-netmaster-425jp | grep stats
+    Image:          contiv/stats
+    Image ID:       docker-pullable://docker.io/contiv/stats@sha256:9dc89b719703cfbd5f3459a4976336c42d470e9eaa9769de647c1ce3486f8e8b
+
+[vagrant@kubeadm-master configs]$ kubectl describe pod -n=kube-system contiv-netplugin-75dxx | grep stats
+    Image:          contiv/stats
+    Image ID:       docker-pullable://docker.io/contiv/stats@sha256:9dc89b719703cfbd5f3459a4976336c42d470e9eaa9769de647c1ce3486f8e8b
+
+[vagrant@kubeadm-master configs]$ kubectl describe pod -n=kube-system contiv-netplugin-zhbrd | grep stats
+    Image:          contiv/stats
+    Image ID:       docker-pullable://docker.io/contiv/stats@sha256:9dc89b719703cfbd5f3459a4976336c42d470e9eaa9769de647c1ce3486f8e8b
+</code></pre>
+<p>Check if <code>stats_exporter</code> exposes metrics for Prometheus to scrape.</p>
+<pre class="highlight plaintext"><code>[vagrant@kubeadm-master configs]$ curl localhost:9004/metrics
+
+[vagrant@kubeadm-master configs]$ curl localhost:9005/metrics
+
+</code></pre>
+
+<h3><a name="ch1"></a> Chapter 1: Prometheus and Grafana</h3>
+<p>Prometheus is an open source monitoring platform that is useful for visualizing time series data. You can monitor and get alerts for your cluster through Prometheus. You can find out more about Prometheus <a href="https://prometheus.io/">here</a>.</p>
+<p>Grafana is an open source data visualization platform which further enhances the user experience. In this tutorial, you will learn how Grafana can visualize the data stored in Prometheus and how to run some useful queries in the Grafana dashboard. For more information on Grafana, click <a href="https://grafana.com/">here</a>.</p>
+<p>Let&#39;s explore Prometheus and Grafana.</p>
+<p>Prometheus and Grafana are running as NodePorts which are exposed on the host IP. Since they are both configured to run on the master node, let&#39;s find out the IP of the master node.</p>
+<pre class="highlight plaintext"><code>[vagrant@kubeadm-master ~]$ kubectl describe nodes kubeadm-master
+</code></pre>
+<p>We can see that its IP is 192.168.2.54.</p>
+<p>We can also find out what port Prometheus is exposed at.</p>
+<pre class="highlight plaintext"><code>[vagrant@kubeadm-master ~]$ kubectl get svc -n kube-system
+NAME         CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+grafana      10.107.61.77     &lt;nodes&gt;       3000:32701/TCP   25m
+kube-dns     10.96.0.10       &lt;none&gt;        53/UDP,53/TCP    58m
+prometheus   10.101.101.193   &lt;nodes&gt;       9090:32700/TCP   25m
+</code></pre>
+<p>Open a browser and navigate to <a href="http://192.168.2.54:32700">http://192.168.2.54:32700</a>. This will open up the Prometheus UI.</p>
+<p>Let&#39;s check and make sure that Prometheus is able to fetch data from all the nodes. At the top click on Status and in the drop down menu click on Targets. You should see a list of targets and that they are <code>UP</code> and green. If it says <code>UNKNOWN</code> it is likely because the environment or prometheus is still configuring.</p>
+<p>Go back to Graph from the top tool bar. Click on the drop down menu that says <code>-insert metric at cursor-</code> and pick any metric. Then click on <code>Execute</code> and <code>Graph</code> right below the <code>Execute</code> button.</p>
+<p>Now let&#39;s move to Grafana.</p>
+<p>Grafana is exposed at port 32701, so let&#39;s navigate to <a href="http://192.168.2.54:32701">http://192.168.2.54:32701</a> in our browser. The Grafana UI will open up and prompt you for a username and password. Username is &quot;admin&quot; and password is &quot;admin&quot;. We will be working with Grafana for the remainder of this tutorial because its UI is more user friendly.</p>
+<p>After you have logged in, you will see an option to <code>Add data source</code>. Click on that. Fill out the information as shown in the following screenshot.</p>
+<p><img alt="Add Data Source" src="/documents/tutorials/add_data_source-d28908f3.png"/></p>
+<p>Click on <code>Add</code> and <code>Save &amp; Test</code>.</p>
+<p>Click on the Grafana logo in the top left of the screen and go to Dashboard and click on <code>New</code>.
+Click on <code>Graph</code>. Click on &quot;Panel Title&quot; and then click on &quot;Edit&quot;.</p>
+
+<h3><a name="ch2"></a> Chapter 2: Basic Ping Example</h3>
+<p>Now go back to your terminal which has the cluster running. You should already have a <code>contiv-net</code> network setup as part of the Networking Tutorial as well as the <code>contiv-c1</code> and <code>contiv-c2</code> pods up and running.</p>
+<pre class="highlight plaintext"><code>[vagrant@kubeadm-master ~]$ netctl net ls
+Tenant   Network      Nw Type  Encap type  Packet tag  Subnet        Gateway    IPv6Subnet  IPv6Gateway  Cfgd Tag
+------   -------      -------  ----------  ----------  -------       ------     ----------  -----------  ---------
+default  default-net  data     vxlan       0           20.1.1.0/24   20.1.1.1
+default  contiv-net   data     vxlan       0           10.1.2.0/24   10.1.2.1
+default  contivh1     infra    vxlan       0           132.1.1.0/24  132.1.1.1
+...
+
+
+[vagrant@kubeadm-master ~]$ kubectl get pods
+NAME        READY     STATUS    RESTARTS   AGE
+contiv-c1   1/1       Running   0          24s
+contiv-c2   1/1       Running   0          9s
+...
+</code></pre>
+<p>Now let&#39;s go back to the Grafana UI and add the following four queries.</p>
+<pre class="highlight plaintext"><code>rx_packets{containerName="contiv-c1"}
+rx_packets{containerName="contiv-c2"}
+tx_packets{containerName="contiv-c1"}
+tx_packets{containerName="contiv-c2"}
+</code></pre>
+<p>Go back to the terminal and set up a ping between the two pods.</p>
+<pre class="highlight plaintext"><code>[vagrant@kubeadm-master ~]$ kubectl exec -it contiv-c1 sh
+/ # ping 10.1.2.3
+</code></pre>
+<p>Now if we go back to the Grafana Dashboard, we should see that the number of packets transmitted increases, so our basic ping works.</p>
+<p><img alt="Basic Ping" src="/documents/tutorials/basic_ping-42d7791e.png"/></p>
+<p>The way the data is displayed shows a monotonically increasing counter. This may not be the most ideal way to display your data, in which case you can also graph deltas. <code>idelta()</code> is a query function that takes a range vector of the metric you want to graph. A range vector is a list of datapoints over a period of time. For example, you can graph the received bytes over a one day span with the following query.</p>
+<p><code>idelta(rx_packets{containerName=&quot;contiv-c1&quot;}[1d])</code></p>
+<p>As you go through the rest of the Networking and Policy Tutorials, you can keep experimenting with different queries and viewing graphs on Grafana.</p>
+
+<h3><a name="resources"></a> Resources</h3>
+<p>For more query functions, find them <a href="https://prometheus.io/docs/querying/functions/">here</a>.</p>
+
+<h3>Improvements or Comments</h3>
+<p>This tutorial was developed by Contiv engineers. Thank you for trying out this tutorial.
+Please file a GitHub issue if you see an issue with the tutorial, or if you prefer
+improving some text, feel free to send a pull request.</p>
+
+	<hr>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <hr>
+            <p style="text-align: center"><font color="black">Copyright &copy; 2017 Cisco and/or its affiliates. All rights reserved.</font>
+            </p>
+    </div>
+</div>

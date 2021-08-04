@@ -1,0 +1,81 @@
+//
+// Header
+// - Project Specific
+// - edits should be made here
+// --------------------------------------------------
+
+#header {
+  background-color: $black;
+
+  .navbar-brand {
+    .logo{
+      color: #FFF;
+      font-family: $font-family-blanc;
+      font-size: 20px;
+      margin-right: 20px;
+      background: image-url('logo3.png') 0 0 no-repeat;
+      @include img-retina("logo3.png", "logo3.png", $project-logo-width, $project-logo-height);
+      background-position: 0 center;
+
+      &:hover{
+        color: $white;
+      }
+    }
+
+    .by{
+      &:hover{
+        svg{
+          .svg-bg-line{
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .buttons{
+    margin-top: 2px; //baseline everything
+
+    ul.navbar-nav{
+      li {
+        &:hover{
+          svg path{
+            fill: $white;
+          }
+        }
+
+        svg path{
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  .main-links,
+  .external-links {
+    li > a {
+      @include project-a-style();
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  #header {
+    .navbar-brand {
+      .logo{
+        padding-left: 42px;
+        font-size: 30px;
+        @include img-retina("logo3.png", "logo3.png", $project-logo-width * .75, $project-logo-height * .75);
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  #header {
+    .navbar-brand {
+      .logo{
+      }
+    }
+  }
+}

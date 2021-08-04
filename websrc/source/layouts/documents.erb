@@ -1,0 +1,193 @@
+<% wrap_layout :inner do %>
+	<% content_for :sidebar do %>
+		<div class="docs-sidebar hidden-print affix-top" role="complementary">
+			<hr>
+			<h3>Release Notes</h3>
+			<ul class="nav">
+				<li<%= sidebar_current("releasenotes") %>>
+					<a href="/documents/releasenotes/v12x.html">1.2.x</a>
+					<a href="/documents/releasenotes/v11x.html">1.1.x</a>
+					<a href="/documents/releasenotes/v10x.html">1.0.x</a>
+				</li>
+			</ul>
+			<hr>
+			<h3>Getting Started</h3>
+							<ul class="nav">
+							<li<%= sidebar_current("gettingstarted") %>>
+								<a href="/documents/gettingStarted/">Intro</a>
+						    </li>
+							<li<%= sidebar_current("features") %>>
+								<a href="/documents/networking/features.html">Features</a>
+						    </li>
+								<li<%= sidebar_current("getting-started-networking-installation") %>>
+									<a href="https://github.com/contiv/install/blob/master/README.md">Installation</a>
+									</li>
+						    <li<%= sidebar_current("Contiv Networking Concepts") %>>
+								<a href="/documents/networking/">Contiv Networking Concepts</a>
+						    </li>
+								</ul>
+									<hr>
+			<h3>Admin Guide</h3>
+			<ul class="nav">
+				<li<%= sidebar_current("admin") %>>
+					<a href="/documents/admin/index.html">Intro</a>
+				</li>
+				<li<%= sidebar_current("admin") %>>
+				    <a href="/documents/admin/createTenant.html">Managing Tenants</a>
+				</li>
+				<li<%= sidebar_current("admin") %>>
+				    <a href="/documents/admin/manageUsers.html">Managing Users</a>
+			    </li>		
+			    <li<%= sidebar_current("admin") %>>
+				    <a href="/documents/admin/manageAuthorizations.html">Managing Authorizations</a>
+			    </li>
+			    <li<%= sidebar_current("admin") %>>
+				    <a href="/documents/admin/createNodes.html">Managing Nodes</a>
+			    </li>
+			     <li<%= sidebar_current("admin") %>>
+				    <a href="/documents/admin/manageNetworks.html">Managing Networks</a>
+			    </li>
+			    <li<%= sidebar_current("admin") %>>
+				    <a href="/documents/admin/manageLDAP.html">Managing LDAP</a>
+			    </li>
+			</ul>
+				</li>
+			</ul>
+			<hr>
+			<h3>User Guide</h3>
+						<!--li<%= sidebar_current("getting-started-storage") %>>
+							<a href="/documents/gettingStarted/storage/storage.html">Storage </a>
+						</li>
+						<li<%= sidebar_current("getting-started-cluster") %>>
+							<a class="hasChildren" href="/documents/gettingStarted/cluster/index.html">Cluster </a>
+							<ul class="subnav">
+								<li<%= sidebar_current("getting-started-cluster-vagrant") %>>
+										<a href="/documents/gettingStarted/cluster/vagrant.html">Single Machine</a>
+								</li>
+								<li<%= sidebar_current("getting-started-cluster-baremetal") %>>
+										<a href="/documents/gettingStarted/cluster/baremetal.html">Multiple Servers</a>
+								</li>
+							</ul>
+						</li-->
+					<ul class="nav">
+						<li<%= sidebar_current("networking-policies") %>>
+								<a href="/documents/networking/policies.html">Policies</a>
+						</li>
+						<li<%= sidebar_current("networking-services") %>>
+								<a href="/documents/networking/services.html">Service Loadbalancing</a>
+						</li>
+						<li<%= sidebar_current("networking-physical") %>>
+								<a class="hasChildren" href="/documents/networking/physical-networks.html">Physical Networks</a>
+								<ul class="nav">
+									<li<%= sidebar_current("networking-physical-bgp") %>>
+											<a href="/documents/networking/bgp.html">L3 Routed Networks</a>
+									</li>
+									<li<%= sidebar_current("networking-physical-l2") %>>
+											<a href="/documents/networking/l2-vlan.html">L2 Bridged Networks</a>
+									</li>
+									<li<%= sidebar_current("networking-physical-aci") %>>
+											<a href="/documents/networking/aci_ug.html">Cisco ACI</a>
+									</li>
+								</ul>
+						</li>
+						<li<%= sidebar_current("networking-ipam") %>>
+								<a href="/documents/networking/ipam.html">IPAM and Service Discovery</a>
+						</li>
+						<li<%= sidebar_current("networking-ipv6") %>>
+								<a href="/documents/networking/ipv6.html">IPv6</a>
+						</li>
+					</ul>
+				</li>
+				<!--li<%= sidebar_current("storage") %>>
+					<a href="/documents/storage/index.html">Storage</a>
+					<ul class="nav">
+						<li<%= sidebar_current("storage-architecture") %>>
+								<a href="/documents/storage/architecture.html">Architecture</a>
+						</li>
+						<li<%= sidebar_current("storage-configuration") %>>
+								<a href="/documents/storage/configuration.html">Configuration</a>
+						</li>
+						<li<%= sidebar_current("storage-containers") %>>
+								<a href="/documents/storage/containers.html">Creating a Container with a Volume</a>
+						</li>
+						<li<%= sidebar_current("storage-volcli") %>>
+								<a href="/documents/storage/volcli.html">Volcli Reference</a>
+						</li>
+					</ul>
+				</li-->
+				<!--li<%= sidebar_current("cluster") %>>
+					<a href="/documents/cluster/index.html">Cluster</a>
+					<ul class="nav">
+						<li<%= sidebar_current("cluster-concepts") %>>
+								<a href="/documents/cluster/concepts.html">Concepts and Terminology</a>
+						</li>
+						<li<%= sidebar_current("cluster-node-lifecycle") %>>
+								<a href="/documents/cluster/node-lifecycle.html">Node Lifecycle Management</a>
+						</li>
+					</ul>
+				</li-->
+			</ul>
+			<hr><p>
+			<h3>Tutorials and Talks</h3>
+				<ul class="nav">
+					<li<%= sidebar_current("tutorials") %>>
+						<a href="/documents/tutorials/index.html">Tutorials</a>
+					</li>
+					<li<%= sidebar_current("demos") %>>
+						<a href="/documents/demos/index.html">Demonstration Videos</a>
+					</li>
+					<li<%= sidebar_current("talks") %>>
+						<a href="/documents/talks/index.html">Community Talks</a>
+					</li>
+				</ul>
+			<hr><p>
+			<h3>OpenShift</h3>
+				<ul class="nav">
+						<li<%= sidebar_current("samples") %>>
+							<a href="/documents/openshift/index.html">Contiv and OpenShift</a>
+						</li>
+				</ul>
+			<hr><p>
+			<h3>Examples</h3>
+				<ul class="nav">
+						</li>
+						<li<%= sidebar_current("samples-mcast") %>>
+							<a href="/documents/samples/mcast.html">Multicast Examples</a>
+						</li>
+				</ul>
+				<hr><p>
+			<h3>Community</h3>
+				<ul class="nav">
+						</li>
+						<li<%= sidebar_current("community") %>>
+							<a href="/documents/community/index.html">Engagement</a>
+							<a href="/documents/community/examples.html">Community Resources </a>
+						</li>
+				</ul>
+			<hr><p>
+			<h3>Reference</h3>
+				<ul class="nav">
+					    <li<%= sidebar_current("api-network") %>>
+					    <a href="/documents/api/wip.html" target="_blank">API Reference</a>
+					    </li> 
+					    <li<%= sidebar_current("api-network") %>>
+					    <a href="/documents/reference/netctlcli.html" target="_blank">CLI Reference</a>
+					    </li> 
+						<li<%= sidebar_current("api-network") %>><a href="https://godoc.org/github.com/contiv/contivmodel/client" target="_blank">Go Client Library</a>
+						</li>
+						<!--li<%= sidebar_current("api-storage") %>><a href="https://godoc.org/github.com/contiv/volplugin/config" target="_blank">Storage API Reference</a><br></li>
+						<li<%= sidebar_current("api-cluster") %>><a href="https://godoc.org/github.com/contiv/cluster" target="_blank">Cluster API Reference</a><br></li-->
+				</ul>
+			<hr><p>
+		</div>
+	<% end %>
+	<%= yield %>
+	<hr>
+<% end %>
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <hr>
+            <p style="text-align: center"><font color="black">Copyright &copy; 2017 Cisco and/or its affiliates. All rights reserved.</font>
+            </p>
+    </div>
+</div>

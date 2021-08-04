@@ -1,0 +1,27 @@
+//
+// Sidebar
+// - Project Specific
+// - Make sidebar edits here
+// --------------------------------------------------
+
+.sidebar {
+  line-height: 0.5;
+  .sidebar-nav {
+    line-height: 0.5;
+    // Links
+    //----------------
+    li {
+      line-height: 0.5;
+      a {
+        color: $black;
+        line-height: 0.5;
+        svg{
+          path{
+            fill: $black;
+            line-height: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

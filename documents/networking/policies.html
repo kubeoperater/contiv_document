@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Networking Policies">
+
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <title>Networking Policies - Contiv</title>
+
+    <link href="/assets/stylesheets/application-ffbab1f8.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]><script src="/assets/javascripts/html5shiv-099439cc.js"></script><script src="/assets/javascripts/respond.min-1eb35b04.js"></script><![endif]-->
+
+    
+  </head>
+
+  <body id="page-Networking Policies" class=" page-Networking Policies layout-documents page-sub">
+
+  <div class="navbar-jumbotron">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/" style="color:$white"><img src="/assets/images/contivicon4-fb7a06d8.png" height="32px" width="32px" alt="Contiv logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right main-nav">
+            <li><a href="/documents/">Docs</a></li>
+            <li><a href="https://github.com/contiv/install/releases" target="_blank">Download</a></li>
+             <li><a href="/documents/community/index.html">Community</a></li>
+             <li><a href="/documents/support/index.html">Support</a></li>
+            <li><a href="http://blogs.cisco.com/tag/contiv" target="_blank">Blog</a></li>
+            
+            <li><a href="https://github.com/contiv" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://contiv.herokuapp.com/" target="_blank"><i class="fa fa-slack"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+<div class="sidebar-overlay"></div>
+
+
+<aside id="sidebar" class="sidebar sidebar-default sidebar-fixed-right" role="navigation">
+    
+    <div class="sidebar-header header-cover">
+        
+        <div class="sidebar-image">
+            <img src="/assets/images/logo3-a96fcb82.png" width="49px" height="56px">
+        </div>
+    </div>
+
+    
+    <ul class="main nav sidebar-nav">
+        <li class="first"><a href="/intro/index.html">Intro</a></li>
+        <li class=""><a href="/docs/index.html">Docs</a></li>
+    </ul>
+    <div class="divider"></div>
+    
+    <ul class="external nav sidebar-nav">
+        <li class=""><a class="v-btn gray sml" href="https://github.com/contiv"><svg id="svg-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;">
+  <style>
+  </style>
+  <path class="" d="M13,0H1C0.5,0,0,0.5,0,1v12c0,0.5,0.5,1,1,1h4.7c0,0,0,0,0-0.1c0-0.2,0-0.6,0-1.1c-1.8,0.4-2.2-0.9-2.2-0.9
+    c-0.3-0.8-0.7-1-0.7-1c-0.6-0.4,0-0.4,0-0.4c0.7,0,1,0.7,1,0.7c0.6,1,1.5,0.7,1.9,0.5c0.1-0.4,0.2-0.7,0.4-0.9c-1.5-0.2-3-0.7-3-3.2
+    c0-0.7,0.3-1.3,0.7-1.8C3.7,5.8,3.5,5.1,3.9,4.2c0,0,0.6-0.2,1.8,0.7c0.5-0.1,1.1-0.2,1.6-0.2c0.6,0,1.1,0.1,1.6,0.2
+    c1.3-0.8,1.8-0.7,1.8-0.7c0.4,0.9,0.1,1.6,0.1,1.7c0.4,0.5,0.7,1,0.7,1.8c0,2.5-1.5,3.1-3,3.2C8.7,11.1,9,11.5,9,12.1
+    c0,0.9,0,1.6,0,1.8c0,0,0,0,0,0.1h4c0.5,0,1-0.5,1-1V1C14,0.5,13.5,0,13,0z"/>
+</svg>
+GitHub</a></li>
+    </ul>
+</aside>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 col-sm-3 col-xs-12">
+					<div class="docs-sidebar hidden-print affix-top" role="complementary">
+			<hr>
+			<h3>Release Notes</h3>
+			<ul class="nav">
+				<li>
+					<a href="/documents/releasenotes/v12x.html">1.2.x</a>
+					<a href="/documents/releasenotes/v11x.html">1.1.x</a>
+					<a href="/documents/releasenotes/v10x.html">1.0.x</a>
+				</li>
+			</ul>
+			<hr>
+			<h3>Getting Started</h3>
+							<ul class="nav">
+							<li>
+								<a href="/documents/gettingStarted/">Intro</a>
+						    </li>
+							<li>
+								<a href="/documents/networking/features.html">Features</a>
+						    </li>
+								<li>
+									<a href="https://github.com/contiv/install/blob/master/README.md">Installation</a>
+									</li>
+						    <li>
+								<a href="/documents/networking/">Contiv Networking Concepts</a>
+						    </li>
+								</ul>
+									<hr>
+			<h3>Admin Guide</h3>
+			<ul class="nav">
+				<li>
+					<a href="/documents/admin/index.html">Intro</a>
+				</li>
+				<li>
+				    <a href="/documents/admin/createTenant.html">Managing Tenants</a>
+				</li>
+				<li>
+				    <a href="/documents/admin/manageUsers.html">Managing Users</a>
+			    </li>		
+			    <li>
+				    <a href="/documents/admin/manageAuthorizations.html">Managing Authorizations</a>
+			    </li>
+			    <li>
+				    <a href="/documents/admin/createNodes.html">Managing Nodes</a>
+			    </li>
+			     <li>
+				    <a href="/documents/admin/manageNetworks.html">Managing Networks</a>
+			    </li>
+			    <li>
+				    <a href="/documents/admin/manageLDAP.html">Managing LDAP</a>
+			    </li>
+			</ul>
+				</li>
+			</ul>
+			<hr>
+			<h3>User Guide</h3>
+						
+					<ul class="nav">
+						<li class="active">
+								<a href="/documents/networking/policies.html">Policies</a>
+						</li>
+						<li>
+								<a href="/documents/networking/services.html">Service Loadbalancing</a>
+						</li>
+						<li>
+								<a class="hasChildren" href="/documents/networking/physical-networks.html">Physical Networks</a>
+								<ul class="nav">
+									<li>
+											<a href="/documents/networking/bgp.html">L3 Routed Networks</a>
+									</li>
+									<li>
+											<a href="/documents/networking/l2-vlan.html">L2 Bridged Networks</a>
+									</li>
+									<li>
+											<a href="/documents/networking/aci_ug.html">Cisco ACI</a>
+									</li>
+								</ul>
+						</li>
+						<li>
+								<a href="/documents/networking/ipam.html">IPAM and Service Discovery</a>
+						</li>
+						<li>
+								<a href="/documents/networking/ipv6.html">IPv6</a>
+						</li>
+					</ul>
+				</li>
+				
+				
+			</ul>
+			<hr><p>
+			<h3>Tutorials and Talks</h3>
+				<ul class="nav">
+					<li>
+						<a href="/documents/tutorials/index.html">Tutorials</a>
+					</li>
+					<li>
+						<a href="/documents/demos/index.html">Demonstration Videos</a>
+					</li>
+					<li>
+						<a href="/documents/talks/index.html">Community Talks</a>
+					</li>
+				</ul>
+			<hr><p>
+			<h3>OpenShift</h3>
+				<ul class="nav">
+						<li>
+							<a href="/documents/openshift/index.html">Contiv and OpenShift</a>
+						</li>
+				</ul>
+			<hr><p>
+			<h3>Examples</h3>
+				<ul class="nav">
+						</li>
+						<li>
+							<a href="/documents/samples/mcast.html">Multicast Examples</a>
+						</li>
+				</ul>
+				<hr><p>
+			<h3>Community</h3>
+				<ul class="nav">
+						</li>
+						<li>
+							<a href="/documents/community/index.html">Engagement</a>
+							<a href="/documents/community/examples.html">Community Resources </a>
+						</li>
+				</ul>
+			<hr><p>
+			<h3>Reference</h3>
+				<ul class="nav">
+					    <li>
+					    <a href="/documents/api/wip.html" target="_blank">API Reference</a>
+					    </li> 
+					    <li>
+					    <a href="/documents/reference/netctlcli.html" target="_blank">CLI Reference</a>
+					    </li> 
+						<li><a href="https://godoc.org/github.com/contiv/contivmodel/client" target="_blank">Go Client Library</a>
+						</li>
+						
+				</ul>
+			<hr><p>
+		</div>
+
+		</div>  
+		<div id="main-content" class="col-sm-9 col-md-9 col-xs-12" role="main">
+			<div class="bs-docs-section">
+					<h1>Network Policies</h1>
+<p>Network policies describe rules for network resource usage, isolation rules, 
+prioritization, and other network behavior on a group of containers.</p>
+<p>There are two types of network policies you can create with Contiv:</p>
+
+<ul>
+<li>Bandwidth - limiting the overall resource use of a group
+</li>
+<li>Isolation - limiting the access of a group
+</li>
+</ul>
+<p>This section covers how to create, update, and delete these policies.</p>
+
+<h2>Network Isolation Policies</h2>
+<p>Network isolation policies enable white-list or black-list access control rules
+to or from an application. Network isolation policies are particularly useful in 
+securing an application tier. A group where an inbound policy is applied can 
+be a service tier or another logical collection of containers that must be part of
+a policy domain.</p>
+<p>The following sections describe how to use UI or the Contiv Network CLI perform create, read, update, delete (CRUD) operations a network isolation policy. These actions can also be done with the Contiv Network REST API, which like the UI supports user authentication.</p>
+
+<h3>Creating a Network Isolation Policy</h3>
+<p>Creating policies for the UI or CLI requires knowing your tenant ahead of time.</p>
+
+<h4>Creating an Isolation Policy Using the UI</h4>
+<p>Policy creation starts with a name for the Isolation Policy and a tenant. After these choices have been made, you can edit the isolation policy to meet your needs.</p>
+<p>1. From <em>Network Policies</em> &gt; <em>Isolation Policies</em> click <em>Create</em>. <br>
+<img alt="CreateIsolation" src="/documents/networking/CreateIsolationPolicy-2d51eda5.png"/><br>
+2. Select the tenant.<br>
+3. Click Create. <br></p>
+
+<h4>Creating a Policy Using the CLI</h4>
+<p>You can create a policy using the <code>create</code> operation on a <code>policy</code> object. During creation, 
+the policy must be supplied with a unique name in the <code>tenant</code> namespace.</p>
+<p>The following command creates a policy named <code>web-policy</code>:</p>
+<pre class="highlight plaintext"><code>$ netctl policy create web-policy
+</code></pre>
+<p>A network isolation policy can have access control list (ACL) -style whitelist 
+or blacklist rules. A policy rule can specify the following information:</p>
+
+<ul>
+<li><code>match criteria</code>: Specified using <code>protocol</code> and optionally a <code>port</code>. If match
+criteria are not specified then the rule matches all traffic If only <code>protocol</code> is
+specified but <code>port</code> is omitted, then the traffic matches all ports.
+
+<ul>
+<li><a name="protocol"/><a href="#protocol"><code>protocol</code></a>: Layer3 (IP, ICMP) or Layer4 (TCP, UDP).
+</li>
+<li><a name="port"/><a href="#port"><code>port</code></a>: a TCP or UDP port number to or from which to permit or deny traffic.
+</li>
+<li><a name="ip_address"/><a href="#ip_address"><code>ip-address</code></a>: Can specify a masked IP address pool, which can be used to specify
+a rules to or from the address pool. It is often useful to specify these rules to and from
+non-container workloads.
+</li>
+</ul>
+</li>
+<li><a name="direction"/><a href="#direction"><code>direction</code></a>: Can be <code>inbound</code> or <code>outbound</code>, from the container 
+application&#39;s point of view. An <code>inbound</code> rule is applicable to the traffic coming in 
+<em>to</em> the containers; an <code>outbound</code> rule is applicable to the traffic 
+going out <em>from</em> the container.
+</li>
+<li><a name="action"/><a href="#action"><code>action</code></a>: A <code>permit</code> or <code>deny</code> action on the traffic that matches the rule. A
+<em>white-list</em> set of rules is typically a set of <code>permit</code> actions followed by a 
+rule to <code>deny</code> the rest.
+</li>
+<li><a name="priority"/><a href="#priority"><code>priority</code></a>: Determines the execution order of the rules, producing a predictable behavior
+for a set of arbitrary rules.
+</li>
+<li><a name="from_group"/><a href="#from_group"><code>from-group</code></a>: Used to <code>permit</code> or <code>deny</code> traffic to or from specific containers, 
+identified as a group.
+</li>
+</ul>
+<p>For example, A policy to allow inbound access to <code>tcp/80</code> and <code>tcp/443</code> and deny all other traffic 
+looks like this:</p>
+<pre class="highlight plaintext"><code>netctl policy rule-add web-policy 1 -direction=in -protocol=tcp -action=deny
+netctl policy rule-add web-policy 2 -direction=in -protocol=tcp -port=80 -action=allow -priority=10
+netctl policy rule-add web-policy 3 -direction=in -protocol=tcp -port=443 -action=allow -priority=10
+</code></pre>
+
+<h3>Associating a Network Isolation Policy to a Group</h3>
+<p>After defining a security policy, you associate it with a group 
+on an existing network <code>contiv-net</code> as follows:</p>
+<pre class="highlight plaintext"><code>netctl group create contiv-net web-group -policy=web-policy
+</code></pre>
+<p>You run containers to be associated with <code>web-group</code> as follows:</p>
+<p>For Docker or Swarm:</p>
+<pre class="highlight plaintext"><code>docker run -itd --net=web-group alpine /bin/sh
+</code></pre>
+<p>For Kubernetes: Specify the group association as a label <code>io.contiv.net-group</code>.
+For example, a service (or pod) specification might look like:</p>
+<pre class="highlight plaintext"><code>apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: prod-web
+spec:
+  replicas: 2
+  selector:
+    app: prod-web
+  template:
+    metadata:
+      labels:
+        app: prod-web
+        io.contiv.net-group: web-group
+    spec:
+      containers:
+      - name: prod-web
+        image: alpine
+        command:
+          - /bin/sh
+</code></pre>
+<p>Kubernetes offers richer options for selection criteria because of the <code>selector</code> concept,
+which allows arbitrary selection of collections of labels to form a dynamic
+<code>group</code>. For example, a collection of {&#39;prod&#39;, &#39;web&#39;} ond {&#39;stage&#39;, &#39;db&#39;, &#39;low-latency&#39;} 
+can both be implicit groups .</p>
+<p>To use this feature, Kubernete&#39;s native policy object must be used, available in 
+Kubernetes Release 1.3 and later.</p>
+
+<h3>Reading, Updating, and Deleting a Network Isolation Policy</h3>
+<p>The <code>netctl</code> utility or the equivalent REST APIs can be used to perform other operations on the policy.
+For example, the following lists all of the usable policies:</p>
+<pre class="highlight plaintext"><code>$ netctl policy ls
+Tenant   Policy
+------   ------
+default  web-policy
+
+</code></pre>
+<p>The following lists all the rules in the policy:</p>
+<pre class="highlight plaintext"><code>$ netctl policy rule-ls web-policy
+Incoming Rules:
+Rule  Priority  From EndpointGroup  From Network  From IpAddress  Protocol  Port  Action
+----  --------  ------------------  ------------  ---------       --------  ----  ------
+1     1                                                           tcp       0     deny
+2     10                                                          tcp       80    allow
+3     10                                                          tcp       443   allow
+Outgoing Rules:
+
+</code></pre>
+<p>To add a new rule to an existing policy, use:</p>
+<pre class="highlight plaintext"><code>$ netctl policy rule-add web-policy 4 -direction=in -protocol=tcp -port=8080 -action=allow -priority 10
+
+$ netctl policy rule-ls web-policy
+Incoming Rules:
+Rule  Priority  From EndpointGroup  From Network  From IpAddress  Protocol  Port  Action
+----  --------  ------------------  ------------  ---------       --------  ----  ------
+1     1                                                           tcp       0     deny
+3     10                                                          tcp       443   allow
+4     10                                                          tcp       8080  allow
+2     10                                                          tcp       80    allow
+Outgoing Rules:
+Rule  Priority  To EndpointGroup  To Network  To IpAddress  Protocol  Port  Action
+----  --------  ----------------  ----------  ---------     --------  ----  ------
+
+</code></pre>
+<p>To delete an existing rule, use the <code>rule-id</code> specified in the <code>rule-delete</code>
+command:</p>
+<pre class="highlight plaintext"><code>netctl policy rule-rm web-policy 4
+</code></pre>
+<p>Finally, to delete a policy, use the <code>delete</code> verb on the policy:</p>
+<pre class="highlight plaintext"><code>netctl policy delete web-policy
+</code></pre>
+
+<h3>Deleting or Updating a Group</h3>
+<p>The <code>netctl</code> utility or equivalen REST APIs can be use to perform CRUD operations on a <code>group</code> object.
+For example, to delete a group, use:</p>
+<pre class="highlight plaintext"><code>netctl group delete web-group
+</code></pre>
+<p><em>Note</em>: You must delete containers and policies associated with a group before deleting
+the group. The <code>netctl group delete</code> command fails if any containers still belong to the
+group or if any policies are still associated with the group.</p>
+<p>Use the <code>create</code> verb to update a group to use a different policy:</p>
+<pre class="highlight plaintext"><code>netctl group create contiv-net web-group -policy=new-web-policy
+</code></pre>
+
+<h3>Associating Multiple Policies with a Group</h3>
+<p>The policy system is dynamic in the following two ways:</p>
+
+<ul>
+<li>Policy rules can be altered after the policy is defined.
+</li>
+<li>Policy associations can be added to or removed from a group of containers at any time.
+</li>
+</ul>
+<p>This section examines specifying a category of rules to be defined as atomic
+units of policy that can be manipulated and applied across a group of containers
+in a flexible manner, and also be updated after the group is defined and created.</p>
+<p>Consider the creation of a <code>staging-web-group</code> that exposes not only the web ports
+but also some ports for diagnostics purposes. For this use case, define two policies
+called <code>allow-web</code> and <code>allow-diags</code> as follows:</p>
+<pre class="highlight plaintext"><code>$ netctl policy create allow-web
+$ netctl policy rule-add allow-web 1 -direction=in -protocol=tcp -action=deny
+$ netctl policy rule-add allow-web 2 -direction=in -protocol=tcp -port=80 -action=allow -priority=10
+$ netctl policy rule-add allow-web 3 -direction=in -protocol=tcp -port=443 -action=allow -priority=10
+$ netctl policy rule-ls allow-web
+Incoming Rules:
+Rule  Priority  From EndpointGroup  From Network  From IpAddress  Protocol  Port  Action
+----  --------  ------------------  ------------  ---------       --------  ----  ------
+1     1                                                           tcp       0     deny
+2     10                                                          tcp       80    allow
+3     10                                                          tcp       443   allow
+
+$ netctl policy create allow-diags
+$ netctl policy rule-add allow-diags 1 -direction=in -protocol=icmp -action=allow
+$ netctl policy rule-ls allow-diags
+Incoming Rules:
+Rule  Priority  From EndpointGroup  From Network  From IpAddress  Protocol  Port  Action
+----  --------  ------------------  ------------  ---------       --------  ----  ------
+1     1                                                           icmp      0     allow
+</code></pre>
+<p>Now associate both of these policies to a group called <code>staging-web-group</code>:</p>
+<pre class="highlight plaintext"><code>$ netctl group create contiv-net stage-web-group -policy=web-policy -policy=allow-diags
+
+$ netctl group ls
+Tenant   Group            Network     Policies
+------   -----            -------     --------
+default  stage-web-group  contiv-net  web-policy,allow-diags
+</code></pre>
+<p>You can now run a container that belongs to <code>stage-web-group</code> as following and
+expect both of the policies be applied to any traffic to the container(s):</p>
+<pre class="highlight plaintext"><code>$ docker run -itd --net=stage-web-group --name=c1 alpine /bin/sh
+</code></pre>
+<p>If you withdraw the <code>allow-diags</code> policy, all rules corresponding to the policy
+are withdrawn automatically. The withdrawl of a policy is done by providing the updated
+list of new policies associated with a group, for example:</p>
+<pre class="highlight plaintext"><code>$ netctl group create contiv-net stage-web-group -policy=web-policy
+$ netctl group ls
+Tenant   Group            Network     Policies
+------   -----            -------     --------
+default  stage-web-group  contiv-net  web-policy
+</code></pre>
+
+<h3>Associating a Policy with Multiple Groups</h3>
+<p>A policy can be applied to multiple groups. In other words, a policy is reusable across groups.
+For example, <code>allow-diags</code> can be used by <code>dev-web-group</code> or <code>staging-web-group</code> or both
+as follows:</p>
+<pre class="highlight plaintext"><code>$ netctl group create contiv-net dev-web-group -policy=allow-diags
+$ netctl group ls
+Tenant   Group            Network     Policies
+------   -----            -------     --------
+default  stage-web-group  contiv-net  web-policy,allow-diags
+default  dev-web-group    contiv-net  allow-diags
+</code></pre>
+<p>Any update to the policy rules is applied to all the groups a policy is associated with. 
+This allows a structured way of creating a block of policies that can be reused, reassigned
+and repurposed dynamically.</p>
+
+<h2>Network Bandwidth Limiting</h2>
+<p>Network bandwidth policies specify the bandwidth limits on all containers
+that belong to a group. These policies &quot;throttle&quot; the bandwidth of every
+container belonging to a specific group.</p>
+
+<h3>Creating a Bandwidth Policy using the UI</h3>
+<p>Policy creation starts with a name for the Bandwidth Policy and a tenant. After these choices have been made, you can edit the isolation policy to meet your needs.</p>
+<p>1. From <em>Network Policies</em> &gt; <em>Bandwidth Policies</em> click <em>Create</em>.<br>
+<img alt="CreateIsolation" src="/documents/networking/CreateBandwidthPolicy-78b3c3a3.png"/><br>
+2. Select the tenant.<br>
+3. Click Create. <br>
+4. Now that you have the policy created, you can set the bandwidth limitation in Mbps. 
+    Note: You must choose a burst greater than 1500 bytes.<br></p>
+
+<h3>Creating a Bandwidth Policy using the CLI</h3>
+<p>Policies like network isolation apply between two groups, whereas other policies,
+including network bandwidth allocation, affect a group or containers within a group.</p>
+<p>A <code>netwrok-profile</code> describes various attributes that apply to a group, for example
+network bandwidth limits. A <code>network-profile</code> can be created as follows:</p>
+<pre class="highlight plaintext"><code>$ netctl netprofile create -b 1Mbps -dscp 3 dev-net-profile
+Name            Tenant      Bandwidth   DSCP
+----            ------      ---------   ----
+dev-net-profile     default     1Mbps       3
+</code></pre>
+<p>This network profile limits associated containers to a network bandwidth of 1Mbps and 
+sets their DSCP (Differentiated Services Code Point, or type of service) bits in the IP header.</p>
+<p>After creation, a profile can be associated with a group:</p>
+<pre class="highlight plaintext"><code>$ netctl group create contiv-net dev-web-group -policy=allow-diags -networkprofile=dev-net-profile
+$ netctl group ls
+Tenant   Group            Network     Policies          Network Profile
+------   -----            -------     --------          ---------------
+default  stage-web-group  contiv-net  web-policy,allow-diags    default
+default  dev-web-group    contiv-net  allow-diags       dev-net-profile
+</code></pre>
+<p>At this point the bandwidth policy is in force on the <code>dev-web-group</code>.</p>
+
+<h3>Using Traffic Prioritization for Network-Wide Application Behavior</h3>
+<p><em>Note</em>: This section is for more advanced network administrators and engineers.</p>
+<p>If a physical network is configured with the classes of traffic identified with DSCP, then
+a DSCP marking can achieve an end to end application behavior. For example, most of the
+physical network switching vendors, like Cisco, provide a way to allow use of network
+bandwidth and traffic scheduling based on DSCP. Configuring physical network devices is
+out of scope for this document; however, it is worth noting that these features provide:</p>
+
+<ul>
+<li>Bandwidth allocation: Specify how much packet buffering is allocated to a given class of service (CoS).
+</li>
+<li>Bandwidth rate limiting: Rate-limit the traffic belonging to a class and specify
+the rules of traffic precedence during bursts or contention. This can provide
+network predictability to classes of traffic.
+</li>
+<li>Traffic scheduling: Usually the default scheduling policy on a switch is to round-robin
+the traffic towards different destinations. In cases of contention, however, a more sophisticated
+scheduling policy can be defined based on DSCP.
+</li>
+</ul>
+<p>The integration of DSCP prioritization with an application can contribute to predictable 
+behavior for network and/or storage traffic.</p>
+
+	<hr>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <hr>
+            <p style="text-align: center"><font color="black">Copyright &copy; 2017 Cisco and/or its affiliates. All rights reserved.</font>
+            </p>
+    </div>
+</div>
